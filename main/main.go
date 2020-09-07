@@ -1,10 +1,12 @@
 package main
 
 import (
-	"main/linkedlist"
+	"fmt"
+	"main/datastructure/hashtable"
+	"main/datastructure/linkedlist"
 )
 
-func main() {
+func linkedListTest() {
 	l := linkedlist.InitList()
 	l.PushFront("1")
 	l.PushFront("2")
@@ -13,4 +15,15 @@ func main() {
 	l.Print()
 	l.RemoveFront()
 	l.Print()
+	l.RemoveBack()
+	l.Print()
+}
+
+func main() {
+	ht := hashtable.InitHashTable()
+	ht.Set("1", "ana")
+	ht.Set("2", "popescu")
+	ht.Set("3", "georgescu")
+
+	fmt.Println(ht.Get("3"))
 }
